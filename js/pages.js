@@ -52,7 +52,7 @@ const Pages = {
           <div class="hero-card">
             <div class="hero-card-title">🗂️ Waste Segregation · ${AppState.get('language') === 'ml' ? 'ഇന്ന്' : 'Today'}</div>
             <div class="waste-mini-grid">
-              ${[['🌿','Biodegradable','#4CAF50'],['♻️','Plastic','#2196F3'],['📰','Paper','#FF9800'],['🫙','Glass','#9C27B0'],['💻','E-Waste','#F44336'],['⚠️','Hazardous','#FF6F00']].map(([i,n,c])=>`
+              ${[['🌿', 'Biodegradable', '#4CAF50'], ['♻️', 'Plastic', '#2196F3'], ['📰', 'Paper', '#FF9800'], ['🫙', 'Glass', '#9C27B0'], ['💻', 'E-Waste', '#F44336'], ['⚠️', 'Hazardous', '#FF6F00']].map(([i, n, c]) => `
               <div class="waste-mini-item"><div class="waste-mini-icon">${i}</div><div>${n}</div></div>`).join('')}
             </div>
           </div>
@@ -80,13 +80,13 @@ const Pages = {
         </div>
         <div class="grid grid-3 gap-3" style="grid-template-columns:repeat(auto-fill,minmax(280px,1fr))">
           ${[
-            { icon:'🏠', title:'Door-to-Door Collection', desc:'HKS collectors visit every registered household in their assigned ward on a fixed schedule.' },
-            { icon:'📍', title:'GPS Live Tracking', desc:'Track your assigned HKS collector in real-time on the map to know when they will arrive.' },
-            { icon:'📋', title:'Digital Collection Records', desc:'All collection activities are recorded digitally, making it easy to track, verify and report.' },
-            { icon:'📢', title:'Instant Notifications', desc:'Get notified when your collector is nearby, when collection is done, or if it was missed.' },
-            { icon:'📊', title:'Ward Reports', desc:'Local body admins get daily, weekly and monthly reports on waste collected per ward.' },
-            { icon:'♻️', title:'Segregated Collection', desc:'Separate collection for biodegradable and non-biodegradable waste on designated days.' },
-          ].map(f=>`<div class="feature-card"><div class="feature-icon">${f.icon}</div><h4 class="feature-title">${f.title}</h4><p class="feature-desc">${f.desc}</p></div>`).join('')}
+        { icon: '🏠', title: 'Door-to-Door Collection', desc: 'HKS collectors visit every registered household in their assigned ward on a fixed schedule.' },
+        { icon: '📍', title: 'GPS Live Tracking', desc: 'Track your assigned HKS collector in real-time on the map to know when they will arrive.' },
+        { icon: '📋', title: 'Digital Collection Records', desc: 'All collection activities are recorded digitally, making it easy to track, verify and report.' },
+        { icon: '📢', title: 'Instant Notifications', desc: 'Get notified when your collector is nearby, when collection is done, or if it was missed.' },
+        { icon: '📊', title: 'Ward Reports', desc: 'Local body admins get daily, weekly and monthly reports on waste collected per ward.' },
+        { icon: '♻️', title: 'Segregated Collection', desc: 'Separate collection for biodegradable and non-biodegradable waste on designated days.' },
+      ].map(f => `<div class="feature-card"><div class="feature-icon">${f.icon}</div><h4 class="feature-title">${f.title}</h4><p class="feature-desc">${f.desc}</p></div>`).join('')}
         </div>
       </div>
     </section>
@@ -105,7 +105,7 @@ const Pages = {
             <div class="waste-icon-wrap" style="background:${cat.color}18">${cat.icon}</div>
             <div class="waste-name-en">${cat.name}</div>
             <div class="waste-name-ml">${cat.nameML}</div>
-            <div class="waste-desc">${cat.description.substring(0,60)}...</div>
+            <div class="waste-desc">${cat.description.substring(0, 60)}...</div>
             <span class="waste-bin">🗑️ ${cat.bin}</span>
             <div class="waste-tips">💡 ${cat.segregationTips}</div>
           </div>`).join('')}
@@ -140,11 +140,11 @@ const Pages = {
         </div>
         <div class="grid grid-4 gap-3" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))">
           ${[
-            { icon:'🏘️', num:'2.1M+', label:'Households registered', labelML:'രജിസ്റ്റർ ചെയ്ത കുടുംബങ്ങൾ' },
-            { icon:'🧹', num:'35,000+', label:'HKS Collectors active', labelML:'സജീവ HKS അംഗങ്ങൾ' },
-            { icon:'🏛️', num:'941', label:'LSGIs participating', labelML:'പങ്കെടുക്കുന്ന LSGIs' },
-            { icon:'♻️', num:'1,200T', label:'Waste recycled monthly', labelML:'പ്രതിമാസം പുനരുപയോഗം' },
-          ].map(s=>`
+        { icon: '🏘️', num: '2.1M+', label: 'Households registered', labelML: 'രജിസ്റ്റർ ചെയ്ത കുടുംബങ്ങൾ' },
+        { icon: '🧹', num: '35,000+', label: 'HKS Collectors active', labelML: 'സജീവ HKS അംഗങ്ങൾ' },
+        { icon: '🏛️', num: '941', label: 'LSGIs participating', labelML: 'പങ്കെടുക്കുന്ന LSGIs' },
+        { icon: '♻️', num: '1,200T', label: 'Waste recycled monthly', labelML: 'പ്രതിമാസം പുനരുപയോഗം' },
+      ].map(s => `
           <div style="text-align:center;padding:28px;background:rgba(255,255,255,0.1);border-radius:var(--radius);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2)">
             <div style="font-size:2.5rem;margin-bottom:12px">${s.icon}</div>
             <div style="font-size:2.2rem;font-weight:900;color:white">${s.num}</div>
@@ -343,7 +343,7 @@ const Pages = {
       </div>
       <div class="container" style="padding:48px 20px">
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(0,1fr));gap:0;background:white;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-bottom:40px">
-          ${[['🟢','Green Bin','Biodegradable','ജൈവ'],['🔵','Blue Bin','Non-Biodegradable','അജൈവ'],['🔴','Red Bin','Sanitary & Hazardous','സാനിറ്ററി'],['⚫','E-Waste','Electronics','ഇലക്ട്രോണിക്']].map(([e,n,t,ml])=>`
+          ${[['🟢', 'Green Bin', 'Biodegradable', 'ജൈവ'], ['🔵', 'Blue Bin', 'Non-Biodegradable', 'അജൈവ'], ['🔴', 'Red Bin', 'Sanitary & Hazardous', 'സാനിറ്ററി'], ['⚫', 'E-Waste', 'Electronics', 'ഇലക്ട്രോണിക്']].map(([e, n, t, ml]) => `
           <div style="padding:24px;text-align:center;border-right:1px solid var(--border)">
             <div style="font-size:2.5rem;margin-bottom:8px">${e}</div>
             <div style="font-weight:700;font-size:0.95rem">${n}</div>
@@ -436,13 +436,13 @@ const Pages = {
       <main class="dashboard-content" id="dash-main">
         <div class="dashboard-header">
           <h2 class="dashboard-title">🏠 ${t('dash_welcome')}, ${user?.name || 'User'}!</h2>
-          <p class="dashboard-subtitle">${user?.ward || ''} · ${district?.name || 'Kerala'} · ${new Date().toLocaleDateString('en-IN', {weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p>
+          <p class="dashboard-subtitle">${user?.ward || ''} · ${district?.name || 'Kerala'} · ${new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
         <div class="stats-grid">
           <div class="stat-card green"><div class="stat-icon">🗓️</div><div class="stat-value">Tomorrow</div><div class="stat-label">${t('dash_next_collection')}</div></div>
           <div class="stat-card orange"><div class="stat-icon">📦</div><div class="stat-value">${pickups.length}</div><div class="stat-label">Pickup Requests</div></div>
           <div class="stat-card blue"><div class="stat-icon">✅</div><div class="stat-value">12</div><div class="stat-label">Collections Done (Month)</div></div>
-          <div class="stat-card red"><div class="stat-icon">📢</div><div class="stat-value">${AppState.get('complaints').filter(c=>c.userId===user?.id).length}</div><div class="stat-label">Open Complaints</div></div>
+          <div class="stat-card red"><div class="stat-icon">📢</div><div class="stat-value">${AppState.get('complaints').filter(c => c.userId === user?.id).length}</div><div class="stat-label">Open Complaints</div></div>
         </div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px">
           <!-- Next Collection -->
@@ -451,10 +451,10 @@ const Pages = {
             <div class="card-body">
               <div class="timeline">
                 ${[
-                  { date:'Tomorrow 7:00 AM', type:'🌿 Biodegradable', status:'scheduled', info:'Green bin ready by 6:30 AM' },
-                  { date:'Thursday 7:00 AM', type:'♻️ Non-Biodegradable', status:'scheduled', info:'Blue bin – plastic, paper, glass' },
-                  { date:'Saturday 10:00 AM', type:'🧹 Special Drive', status:'scheduled', info:'E-waste & hazardous collection' },
-                ].map(e=>`
+        { date: 'Tomorrow 7:00 AM', type: '🌿 Biodegradable', status: 'scheduled', info: 'Green bin ready by 6:30 AM' },
+        { date: 'Thursday 7:00 AM', type: '♻️ Non-Biodegradable', status: 'scheduled', info: 'Blue bin – plastic, paper, glass' },
+        { date: 'Saturday 10:00 AM', type: '🧹 Special Drive', status: 'scheduled', info: 'E-waste & hazardous collection' },
+      ].map(e => `
                 <div class="timeline-item">
                   <div class="timeline-dot"></div>
                   <div class="timeline-content">
@@ -488,7 +488,7 @@ const Pages = {
           <div class="card-header"><h4>♻️ Waste Categories for Today</h4><span class="badge badge-primary">Biodegradable Day</span></div>
           <div class="card-body">
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px">
-              ${WASTE_CATEGORIES.slice(0,6).map(c=>`
+              ${WASTE_CATEGORIES.slice(0, 6).map(c => `
               <div onclick="App.showWasteDetail('${c.id}')" style="padding:12px;border-radius:var(--radius-sm);border:1.5px solid ${c.color}44;background:${c.color}08;cursor:pointer;text-align:center;transition:all .2s" onmouseover="this.style.borderColor='${c.color}'" onmouseout="this.style.borderColor='${c.color}44'">
                 <div style="font-size:1.5rem;margin-bottom:6px">${c.icon}</div>
                 <div style="font-size:0.75rem;font-weight:700">${c.name}</div>
@@ -504,7 +504,7 @@ const Pages = {
           <div class="card-body table-wrap">
             <table>
               <thead><tr><th>Date</th><th>Waste Type</th><th>Status</th><th>Notes</th></tr></thead>
-              <tbody>${pickups.map(p=>`<tr><td>${new Date(p.createdAt).toLocaleDateString('en-IN')}</td><td>${p.wasteType}</td><td><span class="badge badge-warning">${p.status}</span></td><td>${p.notes||'—'}</td></tr>`).join('')}</tbody>
+              <tbody>${pickups.map(p => `<tr><td>${new Date(p.createdAt).toLocaleDateString('en-IN')}</td><td>${p.wasteType}</td><td><span class="badge badge-warning">${p.status}</span></td><td>${p.notes || '—'}</td></tr>`).join('')}</tbody>
             </table>
           </div>
         </div>` : ''}
@@ -529,7 +529,7 @@ const Pages = {
       <main class="dashboard-content">
         <div class="dashboard-header">
           <h2 class="dashboard-title">🧹 ${t('hks_dashboard')}</h2>
-          <p class="dashboard-subtitle">${new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p>
+          <p class="dashboard-subtitle">${new Date().toLocaleDateString('en-IN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         </div>
         <!-- Profile Card -->
         <div class="collector-profile-card" style="margin-bottom:24px">
@@ -537,8 +537,8 @@ const Pages = {
             <div style="width:60px;height:60px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.8rem">🧹</div>
             <div>
               <div class="collector-profile-name">${user?.name || 'HKS Collector'}</div>
-              <div class="collector-profile-id">ID: ${user?.employeeId || 'HKS-'+Date.now()} · ${user?.ward || 'Ward'}</div>
-              <div style="font-size:0.85rem;opacity:0.8">📍 ${user?.lsgi ? KERALA_DATA.districts.flatMap(d=>d.lsgis).find(l=>l.id===user.lsgi)?.name||user.lsgi : 'LSGI'}</div>
+              <div class="collector-profile-id">ID: ${user?.employeeId || 'HKS-' + Date.now()} · ${user?.ward || 'Ward'}</div>
+              <div style="font-size:0.85rem;opacity:0.8">📍 ${user?.lsgi ? KERALA_DATA.districts.flatMap(d => d.lsgis).find(l => l.id === user.lsgi)?.name || user.lsgi : 'LSGI'}</div>
             </div>
           </div>
           <div class="collector-profile-stats">
@@ -561,23 +561,23 @@ const Pages = {
         <div class="card" style="margin-bottom:24px">
           <div class="card-header"><h4>🗺️ ${t('hks_today_collection')} — ${new Date().toLocaleDateString('en-IN')}</h4>
             <div style="display:flex;align-items:center;gap:8px">
-              <div class="progress-bar" style="width:120px"><div class="progress-fill" style="width:${Math.round(collected/Math.max(demo_households.length,1)*100)}%"></div></div>
+              <div class="progress-bar" style="width:120px"><div class="progress-fill" style="width:${Math.round(collected / Math.max(demo_households.length, 1) * 100)}%"></div></div>
               <span style="font-size:0.85rem;font-weight:600">${collected}/${demo_households.length}</span>
             </div>
           </div>
           <div class="card-body">
             <div style="display:flex;flex-direction:column;gap:10px">
               ${demo_households.length === 0 ? `<div class="chart-placeholder">No households assigned in your ward yet. Contact admin.</div>` :
-              demo_households.concat([
-                { id:'demo1', name:'Sharma Family', houseNo:'XV/14', street:'PTP Nagar', ward: user?.ward },
-                { id:'demo2', name:'Krishnan House', houseNo:'PO 55/C', street:'Kanjirampara', ward: user?.ward },
-                { id:'demo3', name:'Fathima Residence', houseNo:'TC 7/88', street:'Palayam', ward: user?.ward },
-              ]).slice(0,8).map((h,i)=>`
+        demo_households.concat([
+          { id: 'demo1', name: 'Sharma Family', houseNo: 'XV/14', street: 'PTP Nagar', ward: user?.ward },
+          { id: 'demo2', name: 'Krishnan House', houseNo: 'PO 55/C', street: 'Kanjirampara', ward: user?.ward },
+          { id: 'demo3', name: 'Fathima Residence', houseNo: 'TC 7/88', street: 'Palayam', ward: user?.ward },
+        ]).slice(0, 8).map((h, i) => `
               <div class="household-item">
-                <div class="household-num">${i+1}</div>
+                <div class="household-num">${i + 1}</div>
                 <div>
                   <div class="household-name">${h.name}</div>
-                  <div class="household-addr">${h.houseNo||'—'}, ${h.street||''} · ${h.ward||''}</div>
+                  <div class="household-addr">${h.houseNo || '—'}, ${h.street || ''} · ${h.ward || ''}</div>
                 </div>
                 <div class="household-status">
                   ${i < collected ? `<span class="badge badge-success">✅ Collected</span>` : `<button class="btn btn-sm btn-primary" onclick="App.markCollected('${h.id}',this)">Mark Collected</button>`}
@@ -625,14 +625,14 @@ const Pages = {
         <div class="stats-grid">
           <div class="stat-card green"><div class="stat-icon">🏠</div><div class="stat-value">${households.length}</div><div class="stat-label">${t('admin_households')}</div><div class="stat-change up">↑ +3 this week</div></div>
           <div class="stat-card orange"><div class="stat-icon">🧹</div><div class="stat-value">${collectors.length}</div><div class="stat-label">${t('admin_hks_members')}</div></div>
-          <div class="stat-card blue"><div class="stat-icon">🏘️</div><div class="stat-value">${lsgi?.wards.length||0}</div><div class="stat-label">Total Wards</div></div>
-          <div class="stat-card red"><div class="stat-icon">📢</div><div class="stat-value">${complaints.filter(c=>c.status==='open').length}</div><div class="stat-label">Open Complaints</div></div>
+          <div class="stat-card blue"><div class="stat-icon">🏘️</div><div class="stat-value">${lsgi?.wards.length || 0}</div><div class="stat-label">Total Wards</div></div>
+          <div class="stat-card red"><div class="stat-icon">📢</div><div class="stat-value">${complaints.filter(c => c.status === 'open').length}</div><div class="stat-label">Open Complaints</div></div>
         </div>
 
         <!-- Tabs -->
         <div class="tabs">
-          ${[['overview','📊 Overview'],['hks','🧹 HKS Members'],['households','🏠 Households'],['schedule','📅 Schedule'],['complaints','📢 Complaints'],['reports','📋 Reports']].map(([id,label])=>`
-          <button class="tab-btn ${id==='overview'?'active':''}" data-tab-group="admin" data-tab="${id}" onclick="App.switchTab('admin','${id}')">${label}</button>`).join('')}
+          ${[['overview', '📊 Overview'], ['hks', '🧹 HKS Members'], ['households', '🏠 Households'], ['schedule', '📅 Schedule'], ['complaints', '📢 Complaints'], ['reports', '📋 Reports']].map(([id, label]) => `
+          <button class="tab-btn ${id === 'overview' ? 'active' : ''}" data-tab-group="admin" data-tab="${id}" onclick="App.switchTab('admin','${id}')">${label}</button>`).join('')}
         </div>
 
         <!-- Overview Tab -->
@@ -641,22 +641,22 @@ const Pages = {
             <div class="card">
               <div class="card-header"><h4>📅 Today's Collection Schedule</h4></div>
               <div class="card-body">
-                ${(lsgi?.wards||[]).slice(0,5).map((w,i)=>`
+                ${(lsgi?.wards || []).slice(0, 5).map((w, i) => `
                 <div style="display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border)">
-                  <span style="font-size:1.2rem">${i%2===0?'🌿':'♻️'}</span>
-                  <div style="flex:1"><div style="font-weight:600;font-size:0.9rem">${w}</div><div style="font-size:0.78rem;color:var(--text-muted)">${i%2===0?'Biodegradable':'Non-Biodegradable'} · ${['7:00 AM','7:30 AM','8:00 AM','8:30 AM','9:00 AM'][i]}</div></div>
-                  <span class="badge badge-${i<3?'success':'warning'}">${i<3?'Completed':'Pending'}</span>
+                  <span style="font-size:1.2rem">${i % 2 === 0 ? '🌿' : '♻️'}</span>
+                  <div style="flex:1"><div style="font-weight:600;font-size:0.9rem">${w}</div><div style="font-size:0.78rem;color:var(--text-muted)">${i % 2 === 0 ? 'Biodegradable' : 'Non-Biodegradable'} · ${['7:00 AM', '7:30 AM', '8:00 AM', '8:30 AM', '9:00 AM'][i]}</div></div>
+                  <span class="badge badge-${i < 3 ? 'success' : 'warning'}">${i < 3 ? 'Completed' : 'Pending'}</span>
                 </div>`).join('')}
               </div>
             </div>
             <div class="card">
               <div class="card-header"><h4>🗺️ Ward Coverage</h4></div>
               <div class="card-body">
-                ${(lsgi?.wards||[]).map((w,i)=>`
+                ${(lsgi?.wards || []).map((w, i) => `
                 <div style="margin-bottom:12px">
-                  <div style="display:flex;justify-content:space-between;font-size:0.85rem;margin-bottom:4px"><span>${w}</span><span style="font-weight:600">${60+i*5}%</span></div>
-                  <div class="progress-bar"><div class="progress-fill" style="width:${60+i*5}%"></div></div>
-                </div>`).slice(0,6).join('')}
+                  <div style="display:flex;justify-content:space-between;font-size:0.85rem;margin-bottom:4px"><span>${w}</span><span style="font-weight:600">${60 + i * 5}%</span></div>
+                  <div class="progress-bar"><div class="progress-fill" style="width:${60 + i * 5}%"></div></div>
+                </div>`).slice(0, 6).join('')}
               </div>
             </div>
           </div>
@@ -674,11 +674,11 @@ const Pages = {
                 <thead><tr><th>Name</th><th>Employee ID</th><th>Phone</th><th>Ward</th><th>Status</th><th>Action</th></tr></thead>
                 <tbody>
                   ${collectors.length === 0 ? `<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:32px">No HKS members registered yet.</td></tr>` :
-                  collectors.map(c=>`<tr>
+        collectors.map(c => `<tr>
                     <td><strong>${c.name}</strong></td>
-                    <td><code>${c.employeeId||'—'}</code></td>
+                    <td><code>${c.employeeId || '—'}</code></td>
                     <td>${c.phone}</td>
-                    <td>${c.ward||'—'}</td>
+                    <td>${c.ward || '—'}</td>
                     <td><span class="badge badge-success">● Active</span></td>
                     <td><button class="btn btn-sm btn-secondary" onclick="App.showToast('Feature available in production version.','info')">📋 View</button></td>
                   </tr>`).join('')}
@@ -713,7 +713,7 @@ const Pages = {
                 <thead><tr><th>Name</th><th>House No.</th><th>Ward</th><th>Phone</th><th>Status</th></tr></thead>
                 <tbody>
                   ${households.length === 0 ? `<tr><td colspan="5" style="text-align:center;color:var(--text-muted);padding:32px">No households registered yet.</td></tr>` :
-                  households.map(h=>`<tr><td><strong>${h.name}</strong></td><td>${h.houseNo||'—'}</td><td>${h.ward||'—'}</td><td>${h.phone}</td><td><span class="badge badge-success">Active</span></td></tr>`).join('')}
+        households.map(h => `<tr><td><strong>${h.name}</strong></td><td>${h.houseNo || '—'}</td><td>${h.ward || '—'}</td><td>${h.phone}</td><td><span class="badge badge-success">Active</span></td></tr>`).join('')}
                   <tr><td><strong>Rajan Family</strong></td><td>TC 15/234</td><td>Ward 7 - Palayam</td><td>9876543210</td><td><span class="badge badge-success">Active</span></td></tr>
                   <tr><td><strong>Latha Krishnan</strong></td><td>MG 7/19 A</td><td>Ward 7 - Palayam</td><td>9876543215</td><td><span class="badge badge-success">Active</span></td></tr>
                 </tbody>
@@ -726,15 +726,15 @@ const Pages = {
         <div class="tab-panel" data-tab-panel="admin" data-panel="schedule">
           <div class="admin-section-header"><h4>📅 Collection Schedule Management</h4><button class="btn btn-primary btn-sm" onclick="App.showToast('Schedule editor opening...','info')">+ Add Schedule</button></div>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
-            ${['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'].map((day,i)=>`
+            ${['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map((day, i) => `
             <div class="schedule-day">
-              <div class="schedule-day-header"><strong>${day}</strong><span class="badge badge-primary">${i%2===0?'Bio':'Non-Bio'}</span></div>
+              <div class="schedule-day-header"><strong>${day}</strong><span class="badge badge-primary">${i % 2 === 0 ? 'Bio' : 'Non-Bio'}</span></div>
               <div class="schedule-slots">
-                ${(lsgi?.wards||['Ward 1','Ward 2']).slice(0,3).map(w=>`
-                <div class="schedule-slot ${i%2===0?'biodegradable':'non_biodegradable'}">
-                  <span class="slot-time">7:${i*5<10?'0'+i*5:i*5} AM</span>
+                ${(lsgi?.wards || ['Ward 1', 'Ward 2']).slice(0, 3).map(w => `
+                <div class="schedule-slot ${i % 2 === 0 ? 'biodegradable' : 'non_biodegradable'}">
+                  <span class="slot-time">7:${i * 5 < 10 ? '0' + i * 5 : i * 5} AM</span>
                   <span class="slot-type">${w}</span>
-                  <span class="slot-status"><span class="badge badge-${i<3?'success':'info'}">Set</span></span>
+                  <span class="slot-status"><span class="badge badge-${i < 3 ? 'success' : 'info'}">Set</span></span>
                 </div>`).join('')}
               </div>
             </div>`).join('')}
@@ -749,7 +749,7 @@ const Pages = {
               <table>
                 <thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Ward</th><th>Status</th><th>Action</th></tr></thead>
                 <tbody>
-                  ${complaints.length === 0 ? '' : complaints.map(c=>`<tr><td>${new Date(c.createdAt).toLocaleDateString('en-IN')}</td><td>${c.category}</td><td>${c.description?.substring(0,40)}...</td><td>${c.ward||'—'}</td><td><span class="badge badge-warning">Open</span></td><td><button class="btn btn-sm btn-primary" onclick="App.showToast('Complaint resolved.','success')">Resolve</button></td></tr>`).join('')}
+                  ${complaints.length === 0 ? '' : complaints.map(c => `<tr><td>${new Date(c.createdAt).toLocaleDateString('en-IN')}</td><td>${c.category}</td><td>${c.description?.substring(0, 40)}...</td><td>${c.ward || '—'}</td><td><span class="badge badge-warning">Open</span></td><td><button class="btn btn-sm btn-primary" onclick="App.showToast('Complaint resolved.','success')">Resolve</button></td></tr>`).join('')}
                   <tr><td>09/11/2026</td><td>Missed Collection</td><td>Collection was missed for 2 consecutive days...</td><td>Ward 7 - Palayam</td><td><span class="badge badge-warning">Open</span></td><td><button class="btn btn-sm btn-primary" onclick="App.showToast('Complaint resolved.','success')">Resolve</button></td></tr>
                   <tr><td>08/11/2026</td><td>Illegal Dumping</td><td>Garbage dumped near the main road...</td><td>Ward 3</td><td><span class="badge badge-success">Resolved</span></td><td><button class="btn btn-sm btn-secondary">View</button></td></tr>
                 </tbody>
@@ -763,13 +763,13 @@ const Pages = {
           <div class="admin-section-header"><h4>📋 Reports</h4></div>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px">
             ${[
-              { icon:'📊', title:'Monthly Collection Report', desc:'Total waste collected by ward and type for the current month.', action:'monthly' },
-              { icon:'🏘️', title:'Ward-wise Summary', desc:'Collection completion rates and pending households per ward.', action:'ward' },
-              { icon:'🧹', title:'HKS Performance Report', desc:'Individual collector daily/weekly collection records.', action:'hks' },
-              { icon:'♻️', title:'Waste Category Report', desc:'Breakdown of waste types: biodegradable vs non-biodegradable.', action:'waste' },
-              { icon:'📢', title:'Complaints Report', desc:'Open, resolved and pending complaint statistics.', action:'complaints' },
-              { icon:'📈', title:'Annual Summary', desc:'Yearly collection trends and environmental impact statistics.', action:'annual' },
-            ].map(r=>`
+        { icon: '📊', title: 'Monthly Collection Report', desc: 'Total waste collected by ward and type for the current month.', action: 'monthly' },
+        { icon: '🏘️', title: 'Ward-wise Summary', desc: 'Collection completion rates and pending households per ward.', action: 'ward' },
+        { icon: '🧹', title: 'HKS Performance Report', desc: 'Individual collector daily/weekly collection records.', action: 'hks' },
+        { icon: '♻️', title: 'Waste Category Report', desc: 'Breakdown of waste types: biodegradable vs non-biodegradable.', action: 'waste' },
+        { icon: '📢', title: 'Complaints Report', desc: 'Open, resolved and pending complaint statistics.', action: 'complaints' },
+        { icon: '📈', title: 'Annual Summary', desc: 'Yearly collection trends and environmental impact statistics.', action: 'annual' },
+      ].map(r => `
             <div class="feature-card">
               <div class="feature-icon">${r.icon}</div>
               <h4 class="feature-title">${r.title}</h4>
@@ -792,7 +792,7 @@ const Pages = {
           <div class="form-group"><label class="form-label">Assigned Ward *</label>
             <select id="new-hks-ward" class="form-control">
               <option value="">— Select Ward —</option>
-              ${(lsgi?.wards||[]).map(w=>`<option value="${w}">${w}</option>`).join('')}
+              ${(lsgi?.wards || []).map(w => `<option value="${w}">${w}</option>`).join('')}
             </select>
           </div>
         </div>
@@ -810,41 +810,41 @@ const Pages = {
     const user = AppState.get('currentUser');
     const links = {
       household: [
-        { icon:'📊', label:'Dashboard', page:'household_dashboard' },
-        { icon:'📅', label:'Collection Schedule', page:'household_dashboard' },
-        { icon:'📦', label:'Request Pickup', modal:'pickup-modal' },
-        { icon:'📢', label:'Report Issue', modal:'complaint-modal' },
-        { icon:'♻️', label:'Waste Guide', page:'waste_guide' },
-        { icon:'🗺️', label:'Map', page:'map_page' },
+        { icon: '📊', label: 'Dashboard', page: 'household_dashboard' },
+        { icon: '📅', label: 'Collection Schedule', page: 'household_dashboard' },
+        { icon: '📦', label: 'Request Pickup', modal: 'pickup-modal' },
+        { icon: '📢', label: 'Report Issue', modal: 'complaint-modal' },
+        { icon: '♻️', label: 'Waste Guide', page: 'waste_guide' },
+        { icon: '🗺️', label: 'Map', page: 'map_page' },
       ],
       collector: [
-        { icon:'📊', label:t('hks_dashboard'), page:'hks_dashboard' },
-        { icon:'🗺️', label:t('hks_my_route'), page:'map_page' },
-        { icon:'🏠', label:t('hks_assigned_households'), page:'hks_dashboard' },
-        { icon:'📡', label:t('hks_live_location'), page:'hks_dashboard' },
-        { icon:'📋', label:t('hks_daily_summary'), page:'hks_dashboard' },
+        { icon: '📊', label: t('hks_dashboard'), page: 'hks_dashboard' },
+        { icon: '🗺️', label: t('hks_my_route'), page: 'map_page' },
+        { icon: '🏠', label: t('hks_assigned_households'), page: 'hks_dashboard' },
+        { icon: '📡', label: t('hks_live_location'), page: 'hks_dashboard' },
+        { icon: '📋', label: t('hks_daily_summary'), page: 'hks_dashboard' },
       ],
       admin: [
-        { icon:'📊', label:'Overview', page:'admin_dashboard' },
-        { icon:'🧹', label:t('admin_hks_members'), page:'admin_dashboard' },
-        { icon:'🏠', label:t('admin_households'), page:'admin_dashboard' },
-        { icon:'📅', label:t('admin_schedule'), page:'admin_dashboard' },
-        { icon:'📢', label:t('admin_complaints'), page:'admin_dashboard' },
-        { icon:'📋', label:t('admin_reports'), page:'admin_dashboard' },
-        { icon:'🗺️', label:'Map View', page:'map_page' },
+        { icon: '📊', label: 'Overview', page: 'admin_dashboard' },
+        { icon: '🧹', label: t('admin_hks_members'), page: 'admin_dashboard' },
+        { icon: '🏠', label: t('admin_households'), page: 'admin_dashboard' },
+        { icon: '📅', label: t('admin_schedule'), page: 'admin_dashboard' },
+        { icon: '📢', label: t('admin_complaints'), page: 'admin_dashboard' },
+        { icon: '📋', label: t('admin_reports'), page: 'admin_dashboard' },
+        { icon: '🗺️', label: 'Map View', page: 'map_page' },
       ]
     };
     return `
     <aside class="sidebar">
       <div class="sidebar-user">
-        <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:8px">${role==='admin'?'🏛️':role==='collector'?'🧹':'🏠'}</div>
-        <div class="sidebar-user-name">${user?.name||'User'}</div>
+        <div style="width:40px;height:40px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;margin-bottom:8px">${role === 'admin' ? '🏛️' : role === 'collector' ? '🧹' : '🏠'}</div>
+        <div class="sidebar-user-name">${user?.name || 'User'}</div>
         <div class="sidebar-user-role">${role === 'admin' ? '🏛️ Local Body Admin' : role === 'collector' ? '🧹 HKS Collector' : '🏠 Household'}</div>
-        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px">${user?.ward||user?.lsgi||'Kerala'}</div>
+        <div style="font-size:0.72rem;color:var(--text-muted);margin-top:2px">${user?.ward || user?.lsgi || 'Kerala'}</div>
       </div>
       <div class="sidebar-section">
-        ${links[role].map(l=>`
-        <button class="sidebar-link" onclick="${l.modal?`App.openModal('${l.modal}')`:`App.navigate('${l.page}')`}">
+        ${links[role].map(l => `
+        <button class="sidebar-link" onclick="${l.modal ? `App.openModal('${l.modal}')` : `App.navigate('${l.page}')`}">
           <span>${l.icon}</span> ${l.label}
         </button>`).join('')}
       </div>
@@ -865,7 +865,7 @@ const Pages = {
               <label class="form-label">Waste Type *</label>
               <select id="pickup-waste-type" class="form-control" required>
                 <option value="">— Select waste type —</option>
-                ${WASTE_CATEGORIES.map(c=>`<option value="${c.id}">${c.icon} ${c.name}</option>`).join('')}
+                ${WASTE_CATEGORIES.map(c => `<option value="${c.id}">${c.icon} ${c.name}</option>`).join('')}
               </select>
             </div>
             <div class="form-group">
@@ -896,7 +896,7 @@ const Pages = {
             <div class="form-group">
               <label class="form-label">Issue Category</label>
               <div class="complaint-category">
-                ${['Missed Collection','Illegal Dumping','Overflowing Bin','Collector Complaint','Road Garbage','Other'].map(cat=>`
+                ${['Missed Collection', 'Illegal Dumping', 'Overflowing Bin', 'Collector Complaint', 'Road Garbage', 'Other'].map(cat => `
                 <button type="button" class="complaint-cat-btn" data-cat="${cat}" onclick="App.selectComplaintCat(this)">${cat}</button>`).join('')}
               </div>
             </div>
@@ -919,3 +919,61 @@ const Pages = {
   }
 };
 
+// js/pages.js – existing file (only the added part is shown)
+
+function renderPage(route) {
+  const main = document.getElementById('main-content');
+  main.innerHTML = ''; // clear
+
+  switch (route) {
+    // ... existing cases ...
+
+    case 'schedule':
+      fetch('schedule.html')
+        .then(r => r.text())
+        .then(html => {
+          main.innerHTML = html;
+          const s = document.createElement('script');
+          s.src = 'js/schedule.js';
+          document.body.appendChild(s);
+        });
+      break;
+
+    case 'track':
+      fetch('track.html')
+        .then(r => r.text())
+        .then(html => {
+          main.innerHTML = html;
+          const s = document.createElement('script');
+          s.src = 'js/track.js';
+          document.body.appendChild(s);
+        });
+      break;
+
+    case 'rewards':
+      fetch('rewards.html')
+        .then(r => r.text())
+        .then(html => {
+          main.innerHTML = html;
+          const s = document.createElement('script');
+          s.src = 'js/rewards.js';
+          document.body.appendChild(s);
+        });
+      break;
+
+    case 'complaint':
+      fetch('complaint.html')
+        .then(r => r.text())
+        .then(html => {
+          main.innerHTML = html;
+          const s = document.createElement('script');
+          s.src = 'js/complaint.js';
+          document.body.appendChild(s);
+        });
+      break;
+
+    // default/fallback
+    default:
+      main.innerHTML = `<p>Page not found.</p>`;
+  }
+}

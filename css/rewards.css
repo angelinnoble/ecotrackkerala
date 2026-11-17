@@ -1,0 +1,22 @@
+#points {
+    margin: 2rem auto;
+    text-align: center
+}
+
+.points-counter {
+    font-size: 3rem;
+    color: #27ae60;
+    font-weight: 700
+}
+
+#challenges ul {
+    list-style: none;
+    padding: 0
+}
+
+#challenges li {
+    margin: .5rem 0;
+    padding: .5rem;
+    background: #f0f8f0;
+    border-radius: 4px
+}

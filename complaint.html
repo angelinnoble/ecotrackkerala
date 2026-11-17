@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complaint – EcoTrack Kerala</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+
+<body>
+    <header>
+        <h1>📢 Report a Missed Collection</h1>
+        <nav><a href="index.html">← Home</a></nav>
+    </header>
+
+    <section id="complaint-form">
+        <h2>File a complaint</h2>
+        <form id="cForm">
+            <label for="cDate">Date of missed pickup</label>
+            <input type="date" id="cDate" required min="">
+            <label for="cDesc">Description</label>
+            <textarea id="cDesc" rows="3" placeholder="What happened?" required></textarea>
+            <label for="cPhoto">Photo (optional)</label>
+            <input type="file" id="cPhoto" accept="image/*">
+            <img id="photoPreview" style="max-width:200px;margin-top:8px;display:none" />
+            <button type="submit">Submit complaint</button>
+        </form>
+    </section>
+
+    <section id="complaint-list">
+        <h2>My complaints</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <script src="js/complaint.js"></script>
+</body>
+
+</html>

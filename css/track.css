@@ -1,0 +1,26 @@
+#map {
+    height: 400px;
+    width: 100%;
+    margin: 1rem 0;
+    border: 1px solid #bbb;
+    border-radius: 4px
+}
+
+#progressBar {
+    background: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 1rem 0
+}
+
+#progressBar div {
+    background: #27ae60;
+    height: 100%;
+    width: 0;
+    transition: width .5s
+}
+
+#track-info {
+    text-align: center
+}

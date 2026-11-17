@@ -62,3 +62,60 @@
 #bookingsTable tbody tr:nth-child(even) {
     background: #f5f5f5;
 }
+
+#booking-form,
+#booking-status {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+#pickupForm {
+    display: grid;
+    gap: .8rem
+}
+
+#pickupForm label {
+    font-weight: 600
+}
+
+#pickupForm select,
+#pickupForm input {
+    padding: .4rem;
+    border: 1px solid #bbb;
+    border-radius: 4px
+}
+
+#pickupForm button {
+    margin-top: .8rem;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: .6rem 1.2rem;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+#pickupForm button:hover {
+    background: #219150
+}
+
+#bookingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem
+}
+
+#bookingsTable th,
+#bookingsTable td {
+    padding: .6rem;
+    border: 1px solid #ccc;
+    text-align: left
+}
+
+#bookingsTable tbody tr:nth-child(even) {
+    background: #f5f5f5
+}
